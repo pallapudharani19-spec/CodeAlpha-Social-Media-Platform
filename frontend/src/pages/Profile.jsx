@@ -156,7 +156,7 @@ const [showEditModal, setshowEditModal] = useState(false);
           <div key={post.id} className="grid-box">
             {post.image ? (
               <img
-                src={`https://social-media-platform-1-8ssl.onrender.com/uploads/${post.image}`}
+                src={getImageUrl(post.image)}
                 alt=""
                 className="grid-image"
               />

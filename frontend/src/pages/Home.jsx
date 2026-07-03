@@ -42,21 +42,20 @@ function Home() {
   };
 
   const deletePost = async (id) => {
-    try {
-      await API.delete(`/posts/${id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+  try {
+    await API.delete(`/posts/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
 
-      alert("Post deleted successfully!");
-      fetchPosts();
-    } catch (err) {
-      console.log(err);
-      alert("Failed to delete post");
-    }
-  };
-
+    alert("Post deleted successfully!");
+    fetchPosts();
+  } catch (err) {
+    console.log(err.response?.data);
+    alert(err.response?.data?.message || "Failed to delete post");
+  }
+};
   const deleteComment = async (commentId) => {
     try {
       await API.delete(`/posts/comment/${commentId}`, {
