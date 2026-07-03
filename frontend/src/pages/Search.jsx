@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/search.css";
+import "../styles/Search.css";
 function Search() {
   const navigate = useNavigate();
 

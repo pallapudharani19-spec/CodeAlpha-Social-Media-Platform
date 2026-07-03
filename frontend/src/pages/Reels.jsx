@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/reels.css";
+import "../styles/Reels.css";
 import {
   FaHeart,
   FaRegComment,

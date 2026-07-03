@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaPaperPlane } from "react-icons/fa";
-import "../styles/chat.css";
+import "../styles/Chat.css";
 
 
 function Chat() {

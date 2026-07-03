@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 import EditProfileModal from "../components/EditProfileModal";
-import "../styles/profile.css";
+import "../styles/Profile.css";
 
 function Profile() {
   const navigate = useNavigate();
