@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
+import "../styles/follow.css";
 
 function Followers() {
   const navigate = useNavigate();
