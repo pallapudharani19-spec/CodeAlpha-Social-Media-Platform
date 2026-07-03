@@ -7,7 +7,7 @@ function Register() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -16,28 +16,29 @@ function Register() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
     try {
       await API.post("/auth/register", user);
-      alert("Registration Successful!");
+      alert("Sign Up Successful!");
       navigate("/login");
     } catch (err) {
-      alert("Registration Failed");
+      console.log(err);
+      alert("Sign Up Failed");
     }
   };
 
   return (
-    <div className="register-container">
-      <div className="register-card">
+    <div className="signup-container">
+      <div className="signup-card">
         <h1>Create Account</h1>
         <p>Join our Social Media Platform 🚀</p>
 
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleSignUp}>
           <input
             type="text"
-            name="name"
+            name="username"
             placeholder="Full Name"
             onChange={handleChange}
             required
@@ -59,7 +60,7 @@ function Register() {
             required
           />
 
-          <button type="submit">Register</button>
+          <button type="submit">Sign Up</button>
         </form>
 
         <p>

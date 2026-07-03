@@ -126,7 +126,7 @@ function Home() {
 
                 {post.image && (
                   <img
-                    src={`${import.meta.env.VITE_API_URL || "http://localhost:5000"}${post.image}`}
+                    src={`${import.meta.env.VITE_API_URL || "https://social-media-platform-gli9.onrender.com"}${post.image}`}
                     alt="Post"
                     className="post-image"
                   />
