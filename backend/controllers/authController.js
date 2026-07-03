@@ -33,7 +33,7 @@ export const register = async (req, res) => {
     );
 
     res.status(201).json({
-      message: "Registration successful",
+      message: "Sign UP successful",
       token,
     });
   } catch (error) {

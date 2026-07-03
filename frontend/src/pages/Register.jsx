@@ -7,7 +7,7 @@ function Register() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
   });
@@ -38,7 +38,7 @@ function Register() {
         <form onSubmit={handleSignUp}>
           <input
             type="text"
-            name="username"
+            name="name"
             placeholder="Full Name"
             value={user.username}
             onChange={handleChange}
