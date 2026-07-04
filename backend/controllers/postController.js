@@ -5,7 +5,7 @@ export const createPost = async (req, res) => {
   try {
     const { content } = req.body;
 
-    const image = req.file ? `/uploads/${req.file.filename}` : null;
+    const image = req.file ? req.file.path : null;
 
     if (!content && !image) {
       return res.status(400).json({
